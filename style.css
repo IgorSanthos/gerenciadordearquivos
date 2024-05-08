@@ -1,0 +1,8 @@
+ 
+ 
+ /* Estilo para o botão do calendário vindo do Jquery */
+.ui-datepicker-trigger {
+    width: 25px;
+    height: auto;
+
+}

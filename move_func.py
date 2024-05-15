@@ -3,15 +3,7 @@ from pathlib import Path
 from datetime import datetime, timedelta
 import sql_func as sql
 
-# Leitura da planilha
-df = sql.select()
-
-# dateCluster = index.cluster
-
-# Filtrando do DataFrame pela coluna 'DataCluster'
-df_filtrado = df[df['DataCluster'] == '2024-04-02']
-
-def move():    
+def move(df_filtrado): 
     # Verificar se o DataFrame filtrado está vazio
     if df_filtrado.empty:
         print("O DataFrame filtrado está vazio. Nenhuma ação a ser realizada.")
@@ -55,5 +47,3 @@ def move():
         print(f"Erro: Permissão negada - {e}")
     except Exception as e:
         print(f"Erro inesperado: {e}")
-
-move()

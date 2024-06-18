@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Cliente</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="/"><img src="/static/img/icon.png" alt="icon"></a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="">LISTA DE CLIENTES</a></li>
+                <li><a href="">ADICIONAR CLIENTES</a></li>
+                <li><a href="">DELETAR CLIENTES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="meuFormulario" action="/adicionar-cliente" method="post">
+        <p id="meuParagrafo">Seu conteúdo aqui</p>
+        <input type="text" id="conteudoInput" name="conteudo">
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('meuFormulario').onsubmit = function(event){
+        var conteudo = document.getElementById('conteudoInput').value;
+        alert(conteudo);
+
+    };
+    </script>
+</body>
+</html>

@@ -6,18 +6,29 @@
     <title>Adicionar Cliente</title>
 </head>
 <body>
-        <form id="meuFormulario" action="/adicionar-cliente" method="post">
-            <p id="meuParagrafo">Seu conteúdo aqui</p>
-            <input type="text" id="conteudoInput" name="conteudo">
-            <button type="submit">Enviar</button>
-        </form>
-    
-        <script>
-            document.getElementById('meuFormulario').onsubmit = function(event){
-            var conteudo = document.getElementById('conteudoInput').value;
-            alert(conteudo);
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="/"><img src="/static/img/icon.png" alt="icon"></a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="pagina_1.html">LISTA DE CLIENTES</a></li>
+                <li><a href="pagina_2.html">ADICIONAR CLIENTES</a></li>
+                <li><a href="pagina_3.html">DELETAR CLIENTES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="meuFormulario" action="/adicionar-cliente" method="post">
+        <p id="meuParagrafo">Seu conteúdo aqui</p>
+        <input type="text" id="conteudoInput" name="conteudo">
+        <button type="submit">Enviar</button>
+    </form>
 
-        };
-        </script>
+    <script>
+        document.getElementById('meuFormulario').onsubmit = function(event){
+        var conteudo = document.getElementById('conteudoInput').value;
+        alert(conteudo);
+
+    };
+    </script>
 </body>
 </html>

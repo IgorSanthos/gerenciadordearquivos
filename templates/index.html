@@ -4,29 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Cliente</title>
-    <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <nav id="menu">
-            <a href="/"><img src="/static/img/icon.png" alt="icon"></a>
-            <li><a href="/">HOME</a></li>
-            <li><a href="selecionar-cliente">LISTA DE CLIENTES</a></li>
-            <li><a href="adicionar-cliente">ADICIONAR CLIENTES</a></li>
-            <li><a href="excluir">DELETAR CLIENTES</a></li>
-        </nav>
-    </header>
+        <form id="meuFormulario" action="/adicionar-cliente" method="post">
+            <p id="meuParagrafo">Seu conteúdo aqui</p>
+            <input type="text" id="conteudoInput" name="conteudo">
+            <button type="submit">Enviar</button>
+        </form>
+    
+        <script>
+            document.getElementById('meuFormulario').onsubmit = function(event){
+            var conteudo = document.getElementById('conteudoInput').value;
+            alert(conteudo);
 
-    <h1>HOME PAGE</h1>
-    <form id="adicionarClienteForm" method="post">
-        <h2>DATA CLUSTER<input type="text" id="dayCluster" name="dayCluster"><br></h2>
-        <button type="submit">Executar</button>
-    </form>
-
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-    <script>var buttonImageURL = "{{ url_for('static', filename='img/calender.png') }}";</script>
+        };
+        </script>
 </body>
 </html>

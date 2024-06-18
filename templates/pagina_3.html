@@ -4,39 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Cliente</title>
-    <!-- Carrega o jQuery e jQuery UI do CDN -->
-    <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">            <!-- Carrega o arquivo CSS local  -->
-    
 </head>
 <body>
-    <header>
-        <nav id = "menu">   <!-- MENU HAMBUGUER-->
-            <a href="/"><img src="/static/img/icon.png" alt="icon"></a>
-            <li><a href="/">HOME</a></li>
-            <li><a href="selecionar-cliente">LISTA DE CLIENTES</a></li>
-            <li><a href="adicionar-cliente">ADICIONAR CLIENTES</a></li>
-            <li><a href="excluir">DELETAR CLIENTES</a></li>
-        </nav>
-    </header>
-    
-    <h1> ADICIONAR CLIENTES</h1>
-    <form id="adicionarClienteForm" method="post">            
-        <label for="dayCluster">Data Cluster    </label>                    <!--Caixa de texto para colocar data-->
-        <input type="hidden" id="dayCluster" name="dayCluster"><br>               <!--DATA-->
-        
-        <label for="clienteName">Nome do Cliente </label>            
-        <input type="text" id="clienteName" name="clienteName"><br>             <!--CLIENTE-->      
-         
-        <button type="submit">Adicionar</button>          <!-- Altere o tipo do botão para "submit" para enviar o formulário quando clicado -->
-    </form>
-    
+    <form id="adicionarClienteForm" method="post">
 
-    <!-- CALENDARIO - Carrega o arquivo JQUERY local -->
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-    <script>var buttonImageURL = "{{ url_for('static', filename='img/calender.png') }}";</script>   <!-- Importar notas -->
+        <label for="dayCluster"> Data Cluster</label>
+        <input type="text" id="dayCluster" name="dayCluster"><br>
+        <label for="clienteName">Nome do Cliente</label>
+        <input type="text" id="clienteName" name="clienteName"><br>       
+        <label for="origem">Origem</label>
+        <input type="text" name="origem" id="origem"><br>
+        <label for="destino">Destino</label>
+        <input type="text" name="destino" id="destino"><br><br>
+    
+        <button type="submit" id="adicionarCliente">Clique Aqui</button> <!-- Altere o tipo do botão para "submit" para enviar o formulário quando clicado -->
+    </form>
 
 </body>
 </html>

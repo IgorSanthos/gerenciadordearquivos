@@ -8,32 +8,23 @@
     <!-- Carrega o jQuery e jQuery UI do CDN -->
     <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
     <script src="https://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">            <!-- Carrega o arquivo CSS local  -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />   
+    <!-- Carrega o arquivo CSS local  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
-<body>    
-    <header> 
-        <nav id = "menu">   <!-- MENU HAMBUGUER-->
-            <a href="/"><img src="/static/img/icon.png" alt="icon"></a>
-            <li><a href="/">HOME</a></li>
-            <li><a href="selecionar-cliente">LISTA DE CLIENTES</a></li>
-            <li><a href="adicionar-cliente">ADICIONAR CLIENTES</a></li>
-            <li><a href="excluir">DELETAR CLIENTES</a></li>
-        </nav>
-    </header>
 
-    <form method="post">
-        <h1>Lista de Clientes</h1>                                                   <!--Cabeçalho-->
-        <label  id="labelDataCluster">Data Cluster <input type="hidden" id="dayCluster" name="dayCluster"></label>
-        <br>  <!--caixa de texto para colocar data-->
-        <button id="ativarTabela" type="submit">Mostrar clientes</button>            <!-- Botao mostrar clientes-->
-        
-        <div id="tabelaCliente" >                                                    <!-- Formulario do banco de dados: Atribuir a div a tabela do pandas, style none esconde a div -->
-            {{table | safe}}                                                         <!-- Exiba a tabela HTML do dataframe do Python -->
-        </div>
-    </form>
-    
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>                        <!-- Carrega o arquivo JQUERY local -->
-    <script>var buttonImageURL = "{{ url_for('static', filename='img/calender.png') }}";</script>   <!-- IMAGEM CALENDARIO -->
+
+<body>
+    <h1>Lista de Clientes</h1>                                  <!--Cabeçalho-->
+    <p>Data Cluster <input type="hidden" id="dayCluster"></p>   <!--caixa de texto para colocar data-->    
+    <button id="ativarTabela">Mostrar clientes</button>         <!-- Botao mostrar clientes-->
+    <div id="tabelaCliente" style="display: none";>             <!-- Formulario do banco de dados: Atribuir a div a tabela do pandas, style none esconde a div -->
+        {{table | safe}}                                        <!-- Exiba a tabela HTML do dataframe do Python -->
+    </div>
+    <!-- Carrega o arquivo JavaScript local DEVE SER CARREGADO DEPOIS DOS ID QUE ESTA SENDO BUSCADO -->
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <!-- Carrega o arquivo JQUERY local -->
+    <script>var buttonImageURL = "{{ url_for('static', filename='img/calender.png') }}";</script>   <!-- Importar notas -->
 </body>
 </html>

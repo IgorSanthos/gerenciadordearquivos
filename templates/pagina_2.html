@@ -5,10 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>selecionar-cliente</title>
 
-    <!-- Carrega o jQuery e jQuery UI do CDN -->
-    <script src="https://code.jquery.com/jquery-1.8.2.js"></script>
-    <script src="https://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />   
     <!-- Carrega o arquivo CSS local  -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
@@ -21,10 +17,6 @@
     <div id="tabelaCliente" style="display: none";>             <!-- Formulario do banco de dados: Atribuir a div a tabela do pandas, style none esconde a div -->
         {{table | safe}}                                        <!-- Exiba a tabela HTML do dataframe do Python -->
     </div>
-    <!-- Carrega o arquivo JavaScript local DEVE SER CARREGADO DEPOIS DOS ID QUE ESTA SENDO BUSCADO -->
-    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-    <!-- Carrega o arquivo JQUERY local -->
-    <script>var buttonImageURL = "{{ url_for('static', filename='img/calender.png') }}";</script>   <!-- Importar notas -->
+
 </body>
 </html>

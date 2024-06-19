@@ -1,12 +1,37 @@
- 
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+:root   {
+    font-size: 62.5%;
+}
  
  /* Estilo para o botão do calendário vindo do Jquery */
 .ui-datepicker-trigger {
-    width: 25px;
+    width: 2rem;
     height: auto;
 
 }
-img {width: 25px;
+img {
+    width: 2rem;
     height: auto;
 
+}
+
+.menu {
+    background-color: rgb(213, 213, 213);
+    margin-bottom: 3rem;
+
+}
+
+li   {
+    display: inline;
+    margin-left: 2rem;
+    font-size: 1.6rem;
+}
+
+body {
+    font-size: 1.6rem;
 }

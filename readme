@@ -1,3 +1,16 @@
 $ git add .
 $ git commit -am "Deploy inicial"
 $ git push heroku main
+
+
+Criar um ambiente virtual
+
+## ligar e desligar o ambiente
+python -m venv meuambiente
+
+Get-ExecutionPolicy
+Set-ExecutionPolicy RemoteSigned
+Set-ExecutionPolicy Restricted
+
+meuambiente\Scripts\activate
+

@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 
 
 app = Flask(__name__)                   # Obrigatorio - Ativação do framework flask 
-#----------------------------------------   PAGINA 1 -  HOME
+#----------------------------------------
 @app.route('/')
 def index():        
     return render_template('index.html')

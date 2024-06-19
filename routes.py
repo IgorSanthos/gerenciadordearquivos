@@ -16,8 +16,8 @@ def index():
 @app.route('/move', methods=['POST'])
 def move():
 
-    dtCliente = '04_2024'
-    with open('C:\\Users\\Igor\\Desktop\\Gerenciador\\templates\\index.html', 'r', encoding='utf-8') as file:
+    # dtCliente = '04_2024'
+    with open('C:\\Users\\Igor\\Desktop\\gerenciadordearquivos\\index.html', 'r', encoding='utf-8') as file:
         html_content = file.read()
 
     soup = BeautifulSoup(html_content, 'html.parser')

@@ -5,12 +5,13 @@ $ git push heroku main
 
 Criar um ambiente virtual
 
-## ligar e desligar o ambiente
-python -m venv meuambiente
 
-    Get-ExecutionPolicy
+
+Get-ExecutionPolicy
 Set-ExecutionPolicy RemoteSigned
 Set-ExecutionPolicy Restricted
 
+## ligar e desligar o ambiente
+python -m venv meuambiente
 meuambiente\Scripts\activate
 

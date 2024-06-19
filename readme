@@ -8,7 +8,7 @@ Criar um ambiente virtual
 ## ligar e desligar o ambiente
 python -m venv meuambiente
 
-Get-ExecutionPolicy
+    Get-ExecutionPolicy
 Set-ExecutionPolicy RemoteSigned
 Set-ExecutionPolicy Restricted
 

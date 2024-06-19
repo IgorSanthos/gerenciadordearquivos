@@ -2,19 +2,22 @@ import shutil
 from pathlib import Path
 from datetime import datetime, timedelta
 
+
 def move_files(df_filtrado):
-    # Obtém a data atual
-    data_atual = datetime.now()
-    # Calcula o primeiro dia do mês atual
-    primeiro_dia_mes_atual = data_atual.replace(day=1)
-    # Obtém o último dia do mês anterior subtraindo um dia do primeiro dia do mês atual
-    ultimo_dia_mes_anterior = primeiro_dia_mes_atual - timedelta(days=1)
-    # Formata o mês anterior e o ano atual como strings com duas casas decimais para o mês
-    mes_anterior = ultimo_dia_mes_anterior.strftime('%m')
-    ano_atual = ultimo_dia_mes_anterior.strftime('%Y')
-    # Cria a variável com mês e ano separados por underscore
-    dtCliente = f"{mes_anterior}_{ano_atual}"
-    # Verificar se o DataFrame filtrado está vazio
+    # # Obtém a data atual
+    # data_atual = datetime.now()
+    # # Calcula o primeiro dia do mês atual
+    # primeiro_dia_mes_atual = data_atual.replace(day=1)
+    # # Obtém o último dia do mês anterior subtraindo um dia do primeiro dia do mês atual
+    # ultimo_dia_mes_anterior = primeiro_dia_mes_atual - timedelta(days=1)
+    # # Formata o mês anterior e o ano atual como strings com duas casas decimais para o mês
+    # mes_anterior = ultimo_dia_mes_anterior.strftime('%m')
+    # ano_atual = ultimo_dia_mes_anterior.strftime('%Y')
+    # # Cria a variável com mês e ano separados por underscore
+    # dtCliente = f"{mes_anterior}_{ano_atual}"
+    # # Verificar se o DataFrame filtrado está vazio
+    dtCliente ='04_2024'
+
     if df_filtrado.empty:
         print("O DataFrame filtrado está vazio. Nenhuma ação a ser realizada.")
         return

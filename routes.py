@@ -16,8 +16,8 @@ def index():
 @app.route('/move', methods=['POST'])
 def move():
 
-    # dtCliente = '04_2024'
-    with open('C:\\Users\\Igor\\Desktop\\gerenciadordearquivos\\index.html', 'r', encoding='utf-8') as file:
+
+    with open('C:\\Users\\Igor\\gerenciadordearquivos\\templates\\index.html', 'r', encoding='utf-8') as file:
         html_content = file.read()
 
     soup = BeautifulSoup(html_content, 'html.parser')
@@ -26,14 +26,15 @@ def move():
     data = []
     for row in rows:
         cols = row.find_all('td')
-        if len(cols) >= 4:  # Verifica se há pelo menos duas colunas
+        if len(cols) >= 4:  #Verifica se há pelo menos duas colunas
             datacluster = cols[0].text.strip()
             nome = cols[1].text.strip()
             origem = cols[2].text.strip()
             destino = cols[3].text.strip()
             data.append([datacluster, nome, origem, destino])
-    # Cria o DataFrame com a origem e destino selecionados
+    #Cria o DataFrame com a origem e destino selecionados
     df_filtrado = pd.DataFrame(data, columns=['DataCluster', 'Nome', 'Origem', 'Destino'])
+
 
     # Chamando a funcao Move
     move_files(df_filtrado)

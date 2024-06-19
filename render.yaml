@@ -1,0 +1,28 @@
+services:
+  - type: web
+    name: meu-projeto
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+
+  - type: cron
+    name: meu-cron-job
+    schedule: "*/5 * * * *"
+    command: python script.py
+
+# Lista de pacotes do sistema a serem instalados
+systemPackages:
+  - build-essential
+  - python3-dev
+  - libatlas-base-dev
+  - libopenblas-dev
+  - liblapack-dev
+  - gfortran
+  - gcc
+  - libssl-dev
+  - libffi-dev
+
+# Comandos a serem executados durante a construção do ambiente
+build:
+  - apt-get update
+  - apt-get install -y build-essential python3-dev libatlas-base-dev libopenblas-dev liblapack-dev gfortran gcc libssl-dev libffi-dev

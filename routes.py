@@ -1,6 +1,6 @@
 
 import os
-from flask  import Flask, render_template, redirect, url_for
+from flask  import Flask, render_template, redirect, url_for, request
 from move_func import move_files
 import pandas as pd
 from bs4 import BeautifulSoup
@@ -18,31 +18,34 @@ def index():
 # FUNCAO MOVE
 @app.route('/move', methods=['POST'])
 def move():
-
-    # Criação de caminho relativo
-    index_path = os.path.join(os.path.dirname(__file__), 'templates', 'index.html')
-    #
-    with open(index_path, 'r', encoding='utf-8') as file:
-        html_content = file.read()
-    #
-    soup = BeautifulSoup(html_content, 'html.parser')
-    table = soup.find('table')
-    rows = table.find_all('tr')
-    data = []
-    for row in rows:
-        cols = row.find_all('td')
-        if len(cols) >= 4:  # Verifica se há pelo menos duas colunas
-            datacluster = cols[0].text.strip()
-            nome = cols[1].text.strip()
-            origem = cols[2].text.strip()
-            destino = cols[3].text.strip()
-            data.append([datacluster, nome, origem, destino])
-    # Cria o DataFrame com a origem e destino selecionados
-    df_filtrado = pd.DataFrame(data, columns=['DataCluster', 'Nome', 'Origem', 'Destino'])
-    # Chamando a funcao Move
-    move_files(df_filtrado)
-    return redirect(url_for('index'))
-
+    try:
+        # Criação de caminho relativo
+        index_path = os.path.join(os.path.dirname(__file__), 'templates', 'index.html')
+        #
+        with open(index_path, 'r', encoding='utf-8') as file:
+            html_content = file.read()
+        #
+        diacluster = request.form.get('comp_select')
+        soup = BeautifulSoup(html_content, 'html.parser')
+        table = soup.find('table', class_=diacluster)
+        rows = table.find_all('tr')
+        data = []
+        for row in rows:
+            cols = row.find_all('td')
+            if len(cols) >= 4:  # Verifica se há pelo menos duas colunas
+                datacluster = cols[0].text.strip()
+                nome = cols[1].text.strip()
+                origem = cols[2].text.strip()
+                destino = cols[3].text.strip()
+                data.append([datacluster, nome, origem, destino])
+        # Cria o DataFrame com a origem e destino selecionados
+        df_filtrado = pd.DataFrame(data, columns=['DataCluster', 'Nome', 'Origem', 'Destino'])
+        # Chamando a funcao Move
+        move_files(df_filtrado)
+        
+        return redirect(url_for('index'))
+    except Exception as e:
+        return str(e), 500
 
 # PAGINA 2 - SELEÇÃO DE CLIENTES
 @app.route('/selecionar-cliente')

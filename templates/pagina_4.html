@@ -6,21 +6,20 @@
     <title>Document</title>
 </head>
 <body>
-    
-
-
-    <script>
-        //                      DELETAR CLIENTE
-document.getElementById("deleteCliente").addEventListener("click", function(){
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/excluir-cliente",true);
-    xhr.onreadystatechange = function(){
-        if(xhr.readyState === 4 && xhr.status === 200) {
-            alert(xhr.responseText)
-        }
-    };
-    xhr.send();
-})
-    </script>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/selecionar-cliente">Lista de Clientes</a></li>
+                <li><a href="">Adicionar Clientes</a></li>
+                <li><a href="">Deletar Clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside>
+        <img src="static/img/aside.png" alt="">  
+    </aside>        <aside>
+        <img src="static/img/aside.png" alt="">  
+    </aside>
 </body>
 </html>

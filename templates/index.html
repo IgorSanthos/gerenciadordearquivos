@@ -4,170 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <!-- fonte -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Gerenciador de Arquivos</title>
 </head>
 <body>
     <header>
         <nav>
             <ul class="menu">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="">LISTA DE CLIENTES</a></li>
-                <li><a href="">ADICIONAR CLIENTES</a></li>
-                <li><a href="">DELETAR CLIENTES</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/selecionar-cliente">Lista de Clientes</a></li>
+                <li><a href="">Adicionar Clientes</a></li>
+                <li><a href="">Deletar Clientes</a></li>
             </ul>
         </nav>
     </header>
+    <div class="content">
+        <aside>
+            <img src="static/img/aside.png" alt="">  
+        </aside>
 
-    <main>
-        <h1>HOME PAGE</h1>
-        <form id="adicionarClienteForm" action="{{url_for('move')}}" method="post">
-            <div>
-                <select>
-                    <option value="C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1">Cluster Prefeitura Geral | Agendado para o dia 1</option>
-                    <option value="C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2">Cluster Prefeitura Geral | Agendado para o dia 2</option>
-                    <option value="C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3">Cluster Prefeitura Geral | Agendado para o dia 3</option>
-                </select>
-                <button type="submit">Executar</button>
-            </div>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>DataCluster</th>
-                        <th>Nome</th>
-                        <th>Origem</th>
-                        <th>Destino</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>01</td>
-                        <td>Cliente1</td>
-                        <td name="origem" id="origem">C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente1\</td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Cliente2</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente2\</td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Cliente3</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente3\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente4</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax4</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente4\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente5</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax5</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente5\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente6</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax6</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente6\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente7</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax7</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente7\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente8</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax8</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente8\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente9</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax9</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente9\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente10</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax10</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente10\</td>
-                    </tr>
-                    <tr>
-                        <td>02</td>
-                        <td>Cliente11</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax11</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente11\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente12</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax12</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente12\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente13</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax13</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente13\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente14</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax14</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente14\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente15</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax15</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente15\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente16</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax16</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente16\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente17</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax17</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente17\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente18</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax18</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente18\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente19</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax19</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente19\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente20</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax20</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente20\</td>
-                    </tr>
-                    <tr>
-                        <td>03</td>
-                        <td>Cliente21</td>
-                        <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax21</td>
-                        <td>C:\Users\Igor\Desktop\Cliente\Cliente21\</td>
-                    </tr>
-                </tbody>
-            </table>
-        </form>
-    </main>
+        <main>
+            <form id="adicionarClienteForm" action="{{url_for('move')}}" method="post">
+                <div>
+                    <h1>TransferEasy</h1>
+                    <h2>Gerenciador de Arquivos</h2>
+                    <h3>Mova os arquivos do Jettax para o seu repositório</h3>
+                    <button class="movebtt" type="submit">Mover Arquivos</button>
+                    <select id="meuSelect" name="comp_select">
+                        <option value="dia1">Cluster Prefeitura Geral | Agendado para o dia 1</option>
+                        <option value="dia2">Cluster Prefeitura Geral | Agendado para o dia 2</option>
+                        <option value="dia3">Cluster Prefeitura Geral | Agendado para o dia 3</option>
+                        <option value="dia4">Cluster Prefeitura Geral | Agendado para o dia 4</option>
+                        <option value="dia5">Cluster Prefeitura Geral | Agendado para o dia 5</option>
+                        <option value="dia6">Cluster Prefeitura Geral | Agendado para o dia 6</option>
+                        <option value="dia7">Cluster Prefeitura Geral | Agendado para o dia 7</option>
+                        <option value="dia8">Cluster Prefeitura Geral | Agendado para o dia 8</option>
+                        <option value="dia9">Cluster Prefeitura Geral | Agendado para o dia 9</option>
+                        <option value="dia10">Cluster Prefeitura Geral | Agendado para o dia 10</option>
+                        <option value="dia11">Cluster Prefeitura Geral | Agendado para o dia 11</option>
+
+                    </select>
+                </div>
+                <!-- dia de cluster 1 -->
+                <section class="tabelas-hidden"> 
+                    <table class="dia1">
+                        <thead>
+                            <caption>Cluster Prefeitura Geral | Agendado para o dia 1</caption>
+                            <tr>
+                                <th>DataCluster</th>
+                                <th>Nome</th>
+                                <th>Origem</th>
+                                <th>Destino</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>Cliente1</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente1\</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Cliente2</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente2\</td>
+                            </tr>
+                            <tr>
+                                <td>01</td>
+                                <td>Cliente3</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente3\</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- dia de cluster 2 -->
+                    <table class="dia2">
+                        <thead>
+                            <caption>Cluster Prefeitura Geral | Agendado para o dia 2</caption>
+                            <tr>
+                                <th>DataCluster</th>
+                                <th>Nome</th>
+                                <th>Origem</th>
+                                <th>Destino</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente4</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax4</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente4\</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente5</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax5</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente5\</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente6</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax6</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente6\</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente7</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax7</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente7\</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente8</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax8</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente8\</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente9</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax9</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente9\</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente10</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax10</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente10\</td>
+                            </tr>
+                            <tr>
+                                <td>02</td>
+                                <td>Cliente11</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia2\Cliente_jettax11</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente11\</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+                    <!-- dia de cluster 3 -->
+                    <table class="dia3">
+                        <thead>
+                            <caption>Cluster Prefeitura Geral | Agendado para o dia 3</caption>
+                            <tr>
+                                <th>DataCluster</th>
+                                <th>Nome</th>
+                                <th>Origem</th>
+                                <th>Destino</th>
+                            </tr>
+                        </thead>                
+                        <tbody>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente12</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax12</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente12\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente13</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax13</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente13\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente14</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax14</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente14\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente15</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax15</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente15\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente16</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax16</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente16\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente17</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax17</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente17\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente18</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax18</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente18\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente19</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax19</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente19\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente20</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax20</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente20\</td>
+                            </tr>
+                            <tr>
+                                <td>03</td>
+                                <td>Cliente21</td>
+                                <td>C:\Users\Igor\Desktop\Jettax\geral\dia3\Cliente_jettax21</td>
+                                <td>C:\Users\Igor\Desktop\Cliente\Cliente21\</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </form>
+        </main>
+    </div>
 </body>
 </html>

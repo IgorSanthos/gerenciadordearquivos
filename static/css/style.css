@@ -2,36 +2,127 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 :root   {
     font-size: 62.5%;
+    font-family: "Roboto", sans-serif;
 }
- 
- /* Estilo para o botão do calendário vindo do Jquery */
-.ui-datepicker-trigger {
-    width: 2rem;
-    height: auto;
 
+
+header{
+    background-color: #f2e8de1a;
+}
+/* menu */
+nav {
+    height: 5rem;
+    padding: 2rem;
+}
+nav a {
+
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    padding: 1rem;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    color: #EE3D25;
+    
+    font-weight: 500;
+}
+.menu, li{
+    display: inline;
+    font-size: 1.6rem;
+}
+
+
+/* corpo fora o menu */
+.content {
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-areas:
+        ". . . . ."
+        ". hero . form ."
+        ". . . tab .";
+        gap: 4rem;
+}
+
+/* Lado Esquerdo */
+aside {
+    width: 80rem;
+    height: 56rem;
+    margin: 0;
+    grid-area: hero;
+    background-color:#6CBE45;
+    text-align: center;
 }
 img {
-    width: 2rem;
+    width: 70rem;
     height: auto;
-
 }
 
-.menu {
-    background-color: rgb(213, 213, 213);
-    margin-bottom: 3rem;
+
+/* Lado Direito */
+main {
+    grid-area: form;
+    text-align: center;
+    padding-bottom: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60rem;
 
 }
+main div{
+    /* background-color: #6CBE45; */
+    align-items: center;
+    display: flex;
+    font-weight: 100;
+    font-size: 2rem;
+    flex-direction: column;
+}
+main div h2{
+    font-weight: 500;
 
-li   {
-    display: inline;
-    margin-left: 2rem;
+}
+main div h3 {
+
+    padding-bottom: 4rem;
+    font-weight: 200;
     font-size: 1.6rem;
 }
+main div .movebtt{
+    font-size: 2.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 31rem;
+    background-color: #ECA521;
+    margin-bottom: 2rem;
+    color: #F2E8DE;
+}
+main div select{
+    font-size: 1.68rem;
+    text-align: justify;
+    width:40rem;
+    background-color: #F2E8DE;
+}
+.tabelas-hidden {/* tabela  */
+    display: none;
+}
 
-body {
-    font-size: 1.6rem;
+table {
+    width: 60rem;
+    grid-area: tab;
+    font-size: 1.2rem;
+    background-color: #ECA521;
+
+
+}
+tr{
+    background-color: #6CBE45;
+}
+td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
 }

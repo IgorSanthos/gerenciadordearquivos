@@ -1,6 +1,7 @@
 import shutil
 from pathlib import Path
 from datetime import datetime, timedelta
+import os
 
 #def
 def move_files(df_filtrado):
@@ -25,10 +26,18 @@ def move_files(df_filtrado):
     try:
         for index,row in df_filtrado.iterrows():
             clienteJettax = Path(row['Origem'])
-            clienteDest = Path(row['Destino']) / dtCliente
+            #clienteDest = Path(row['Destino']) / dtCliente
 
-            clienteDest = clienteDest.resolve()
-        
+            caminho_absoluto = Path(row['Destino']) / dtCliente
+            # Obtendo o diretório atual do script (ou do ponto de execução)
+            diretorio_atual = os.path.abspath(os.path.dirname(__file__))
+
+            # Transformando o caminho absoluto em um caminho relativo
+            caminho_relativo = os.path.relpath(caminho_absoluto, diretorio_atual)
+
+            # Usando o caminho relativo
+            clienteDest = Path(caminho_relativo)
+
             arquivos = {
                 'enviada': list(clienteJettax.glob('enviada*')),
                 'recebida': list(clienteJettax.glob('recebido*')),

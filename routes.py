@@ -8,12 +8,6 @@ from bs4 import BeautifulSoup
 # INICIO
 app = Flask(__name__)
 
-# logging.basicConfig(
-#     filename='app.log',
-#     level=logging.DEBUG,
-#     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-#     datefmt='%Y-%m-%d %H:%M:%S'
-# )
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Diretório do arquivo atual
 # PAGINA 1 HOME
@@ -43,7 +37,7 @@ def move():
                 datacluster = cols[0].text.strip()
                 nome = cols[1].text.strip()
                 origem = cols[2].text.strip()       # Origem vinda do HTML
-                destino = r'C:\Users\Igor\Desktop\Cliente\Cliente1'     # cols[3].text.strip()      # Destino vindo do HTML
+                destino = cols[3].text.strip()      # Destino vindo do HTML
                 data.append([datacluster, nome, origem, destino])
 
         # Cria o DataFrame com a origem e destino selecionados

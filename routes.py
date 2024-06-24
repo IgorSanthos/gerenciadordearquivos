@@ -44,7 +44,7 @@ def move():
                 datacluster = cols[0].text.strip()
                 nome = cols[1].text.strip()
                 origem = cols[2].text.strip()       # Origem vinda do HTML
-                destino = r'C:\Users\Igor\Desktop\Cliente\Cliente1' # cols[3].text.strip()      # Destino vindo do HTML
+                destino = r'C:\Users\Igor\Desktop\Cliente\Cliente1'     # cols[3].text.strip()      # Destino vindo do HTML
                 data.append([datacluster, nome, origem, destino])
 
         # Cria o DataFrame com a origem e destino selecionados

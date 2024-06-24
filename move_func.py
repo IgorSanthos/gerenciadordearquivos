@@ -27,6 +27,8 @@ def move_files(df_filtrado):
             clienteJettax = Path(row['Origem'])
             clienteDest = Path(row['Destino']) / dtCliente
 
+            clienteDest = clienteDest.resolve()
+        
             arquivos = {
                 'enviada': list(clienteJettax.glob('enviada*')),
                 'recebida': list(clienteJettax.glob('recebido*')),

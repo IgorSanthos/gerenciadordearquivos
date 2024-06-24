@@ -4,9 +4,17 @@ from flask  import Flask, render_template, redirect, url_for, request
 from move_func import move_files
 import pandas as pd
 from bs4 import BeautifulSoup
+import logging
 
 # INICIO
 app = Flask(__name__)
+
+logging.basicConfig(
+    filename='app.log',
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 
 # PAGINA 1 HOME
@@ -45,7 +53,7 @@ def move():
         
         return redirect(url_for('index'))
     except Exception as e:
-        return str(e), 500
+        return f"Erro ao mover arquivos: {e}", 500
 
 # PAGINA 2 - SELEÇÃO DE CLIENTES
 @app.route('/selecionar-cliente')

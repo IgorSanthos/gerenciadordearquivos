@@ -32,7 +32,7 @@ def move_files(df_filtrado):
             diretorio_atual = os.path.abspath(os.path.dirname(__file__))
 
             # Transformando o caminho absoluto em um caminho relativo
-            caminho_relativo = os.path.relpath(caminho_absoluto / dtCliente, diretorio_atual)
+            caminho_relativo = os.path.relpath(f'{caminho_absoluto}/{dtCliente}', diretorio_atual)
 
             # Usando o caminho relativo
             clienteDest = Path(caminho_relativo)

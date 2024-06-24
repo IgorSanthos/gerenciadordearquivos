@@ -25,17 +25,16 @@ def move_files(df_filtrado):
     
     try:
         for index,row in df_filtrado.iterrows():
-            clienteJettax = Path(row['Origem'])
+            cAbs_origem = Path(row['Origem'])
+            cAbs_destino = Path(row['Destino'])
+            
+            diretorio_atual = os.path.abspath(os.path.dirname(__file__))# Obtendo o diretório atual do script (ou do ponto de execução)
 
-            caminho_absoluto = Path(row['Destino'])
-            # Obtendo o diretório atual do script (ou do ponto de execução)
-            diretorio_atual = os.path.abspath(os.path.dirname(__file__))
-
-            # Transformando o caminho absoluto em um caminho relativo
-            caminho_relativo = os.path.relpath(caminho_absoluto, diretorio_atual)
-
-            # Usando o caminho relativo
-            clienteDest = Path(caminho_relativo)
+            cRel_origem = os.path.realpath(cAbs_origem)
+            cRel_destino = os.path.relpath(cAbs_destino, diretorio_atual)# Transformando o caminho absoluto em um caminho relativo
+            
+            clienteDest = Path(cRel_destino) # Usando o caminho relativo
+            clienteJettax = Path(cRel_origem)
 
             arquivos = {
                 'enviada': list(clienteJettax.glob('enviada*')),
@@ -61,7 +60,7 @@ def move_files(df_filtrado):
             for arquivo in arquivos['nfts']:
                 shutil.copy(arquivo, destinos['nfs'][1])
 
-        print(f"Arquivos movidos com sucesso.{clienteDest}" )
+        print(f"Arquivos movidos com sucesso.{clienteDest} >>> {clienteJettax}" )
 
     except FileNotFoundError as e:
         print(f"Erro: Arquivo não encontrado - {e}")

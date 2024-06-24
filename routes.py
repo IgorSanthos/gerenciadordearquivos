@@ -8,13 +8,6 @@ from bs4 import BeautifulSoup
 # INICIO
 app = Flask(__name__)
 
-logging.basicConfig(
-    filename='app.log',
-    level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
-)
-
 # logging.basicConfig(
 #     filename='app.log',
 #     level=logging.DEBUG,

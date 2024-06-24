@@ -17,7 +17,7 @@ def move_files(df_filtrado):
     # # Cria a variável com mês e ano separados por underscore
     # dtCliente = f"{mes_anterior}_{ano_atual}"
     # # Verificar se o DataFrame filtrado está vazio
-    dtCliente ='04_2024'
+    dtCliente = '04_2024'
 
     if df_filtrado.empty:
         print("O DataFrame filtrado está vazio. Nenhuma ação a ser realizada.")
@@ -26,14 +26,13 @@ def move_files(df_filtrado):
     try:
         for index,row in df_filtrado.iterrows():
             clienteJettax = Path(row['Origem'])
-            #clienteDest = Path(row['Destino']) / dtCliente
 
-            caminho_absoluto = Path(row['Destino']) / dtCliente
+            caminho_absoluto = Path(row['Destino'])
             # Obtendo o diretório atual do script (ou do ponto de execução)
             diretorio_atual = os.path.abspath(os.path.dirname(__file__))
 
             # Transformando o caminho absoluto em um caminho relativo
-            caminho_relativo = os.path.relpath(caminho_absoluto, diretorio_atual)
+            caminho_relativo = os.path.relpath(caminho_absoluto / dtCliente, diretorio_atual)
 
             # Usando o caminho relativo
             clienteDest = Path(caminho_relativo)

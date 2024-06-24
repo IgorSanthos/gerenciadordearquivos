@@ -4,10 +4,16 @@ from flask  import Flask, render_template, redirect, url_for, request
 from move_func import move_files
 import pandas as pd
 from bs4 import BeautifulSoup
-# import logging
 
 # INICIO
 app = Flask(__name__)
+
+logging.basicConfig(
+    filename='app.log',
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    datefmt='%Y-%m-%d %H:%M:%S'
+)
 
 # logging.basicConfig(
 #     filename='app.log',

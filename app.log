@@ -1,0 +1,106 @@
+2024-06-24 08:57:58 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 08:57:58 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 08:58:12 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 08:58:12] "GET / HTTP/1.1" 200 -
+2024-06-24 08:58:12 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 08:58:12] "[36mGET /static/img/aside.png HTTP/1.1[0m" 304 -
+2024-06-24 08:58:12 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 08:58:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-06-24 08:58:13 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 08:58:13] "[32mPOST /move HTTP/1.1[0m" 302 -
+2024-06-24 08:58:13 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 08:58:13] "GET / HTTP/1.1" 200 -
+2024-06-24 08:58:13 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 08:58:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-06-24 08:58:13 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 08:58:13] "[36mGET /static/img/aside.png HTTP/1.1[0m" 304 -
+2024-06-24 08:59:01 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\os.py', reloading
+2024-06-24 08:59:02 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 08:59:02 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 09:11:00 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Igor\\gerenciadordearquivos\\move_func.py', reloading
+2024-06-24 09:11:00 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Igor\\gerenciadordearquivos\\move_func.py', reloading
+2024-06-24 09:11:00 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Igor\\gerenciadordearquivos\\move_func.py', reloading
+2024-06-24 09:11:00 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Igor\\gerenciadordearquivos\\move_func.py', reloading
+2024-06-24 09:11:01 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 09:11:01 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\enviadas1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\enviadas_em_excel.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\enviadas_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\recebidos1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\recebidos_em_excel - Copia.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\recebidos_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\nfts\nfts.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Tomados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\guia\guia.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivos movidos com sucesso para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\enviadas1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\enviadas_em_excel.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\enviadas_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\recebidos1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\recebidos_em_excel - Copia.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\recebidos_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\nfts\nfts.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Tomados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\guia\guia.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivos movidos com sucesso para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\enviadas1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\enviadas_em_excel.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\enviadas_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\recebidos1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\recebidos_em_excel - Copia.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\recebidos_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\nfts\nfts.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Tomados
+2024-06-24 09:11:22 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\guia\guia.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:11:22 - root - INFO - Arquivos movidos com sucesso para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024
+2024-06-24 09:11:22 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:11:22] "[32mPOST /move HTTP/1.1[0m" 302 -
+2024-06-24 09:11:22 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:11:22] "GET / HTTP/1.1" 200 -
+2024-06-24 09:11:22 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:11:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-06-24 09:11:22 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:11:22] "[36mGET /static/img/aside.png HTTP/1.1[0m" 304 -
+2024-06-24 09:11:41 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\ntpath.py', reloading
+2024-06-24 09:11:42 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 09:11:42 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\enviadas1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\enviadas_em_excel.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\enviadas_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\recebidos1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\recebidos_em_excel - Copia.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\recebidos_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\nfts\nfts.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Tomados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax1\guia\guia.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivos movidos com sucesso para C:\Users\Igor\Desktop\Cliente\Cliente1\04_2024
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\enviadas1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\enviadas_em_excel.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\enviadas_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\recebidos1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\recebidos_em_excel - Copia.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\recebidos_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\nfts\nfts.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Tomados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax2\guia\guia.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivos movidos com sucesso para C:\Users\Igor\Desktop\Cliente\Cliente2\04_2024
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\enviadas1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\enviadas_em_excel.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\enviadas_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\recebidos1.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\recebidos_em_excel - Copia.xlsx movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\recebidos_em_pdf.pdf movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\nfts\nfts.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Tomados
+2024-06-24 09:12:12 - root - INFO - Arquivo C:\Users\Igor\Desktop\Jettax\geral\dia1\Cliente_jettax3\guia\guia.txt movido para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024\Arquivos XML\Serviços Prestados
+2024-06-24 09:12:12 - root - INFO - Arquivos movidos com sucesso para C:\Users\Igor\Desktop\Cliente\Cliente3\04_2024
+2024-06-24 09:12:12 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:12] "[32mPOST /move HTTP/1.1[0m" 302 -
+2024-06-24 09:12:12 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:12] "GET / HTTP/1.1" 200 -
+2024-06-24 09:12:12 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:12] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-06-24 09:12:12 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:12] "[36mGET /static/img/aside.png HTTP/1.1[0m" 304 -
+2024-06-24 09:12:20 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Igor\\gerenciadordearquivos\\move_func.py', reloading
+2024-06-24 09:12:20 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Igor\\gerenciadordearquivos\\move_func.py', reloading
+2024-06-24 09:12:20 - werkzeug - INFO -  * Detected change in 'c:\\Users\\Igor\\gerenciadordearquivos\\move_func.py', reloading
+2024-06-24 09:12:21 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 09:12:21 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 09:12:25 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:25] "[32mPOST /move HTTP/1.1[0m" 302 -
+2024-06-24 09:12:25 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:25] "GET / HTTP/1.1" 200 -
+2024-06-24 09:12:25 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:25] "[36mGET /static/img/aside.png HTTP/1.1[0m" 304 -
+2024-06-24 09:12:25 - werkzeug - INFO - 127.0.0.1 - - [24/Jun/2024 09:12:25] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2024-06-24 09:17:28 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\html\\parser.py', reloading
+2024-06-24 09:17:29 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 09:17:29 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 09:24:51 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\posixpath.py', reloading
+2024-06-24 09:24:51 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 09:24:51 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 09:25:08 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\flask\\globals.py', reloading
+2024-06-24 09:25:09 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 09:25:09 - werkzeug - INFO -  * Debugger PIN: 954-495-033
+2024-06-24 09:30:35 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\gunicorn\\app\\wsgiapp.py', reloading
+2024-06-24 09:30:35 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\gunicorn\\app\\base.py', reloading
+2024-06-24 09:30:35 - werkzeug - INFO -  * Detected change in 'C:\\Users\\Igor\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\gunicorn\\util.py', reloading
+2024-06-24 09:30:36 - werkzeug - WARNING -  * Debugger is active!
+2024-06-24 09:30:36 - werkzeug - INFO -  * Debugger PIN: 954-495-033

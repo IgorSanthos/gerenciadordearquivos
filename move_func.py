@@ -1,40 +1,31 @@
 import shutil
 from pathlib import Path
-from datetime import datetime, timedelta
 import os
 
-#def
 def move_files(df_filtrado):
-    # # Obtém a data atual
-    # data_atual = datetime.now()
-    # # Calcula o primeiro dia do mês atual
-    # primeiro_dia_mes_atual = data_atual.replace(day=1)
-    # # Obtém o último dia do mês anterior subtraindo um dia do primeiro dia do mês atual
-    # ultimo_dia_mes_anterior = primeiro_dia_mes_atual - timedelta(days=1)
-    # # Formata o mês anterior e o ano atual como strings com duas casas decimais para o mês
-    # mes_anterior = ultimo_dia_mes_anterior.strftime('%m')
-    # ano_atual = ultimo_dia_mes_anterior.strftime('%Y')
-    # # Cria a variável com mês e ano separados por underscore
-    # dtCliente = f"{mes_anterior}_{ano_atual}"
-    # # Verificar se o DataFrame filtrado está vazio
-    #dtCliente = '/04_2024'
     if df_filtrado.empty:
         print("O DataFrame filtrado está vazio. Nenhuma ação a ser realizada.")
         return
-    
+
     try:
         for index, row in df_filtrado.iterrows():
             # Obtendo o diretório atual
             diretorio_atual = Path(__file__).parent.resolve()
 
             # Caminho de origem e destino usando pathlib
-            caminho_absoluto_origem = Path(row['Origem'])
-            caminho_relativo_origem = caminho_absoluto_origem.relative_to(diretorio_atual)
-            clienteJettax = caminho_relativo_origem
+            caminho_absoluto_origem = Path(row['Origem']).resolve()
+            caminho_absoluto_destino = Path(row['Destino']).resolve()
 
-            caminho_absoluto_destino = Path(row['Destino'])
-            caminho_relativo_destino = caminho_absoluto_destino.relative_to(diretorio_atual)
-            clienteDest = caminho_relativo_destino
+            # Validando e ajustando os caminhos
+            if not caminho_absoluto_origem.is_absolute():
+                clienteJettax = (diretorio_atual / caminho_absoluto_origem).resolve()
+            else:
+                clienteJettax = caminho_absoluto_origem
+
+            if not caminho_absoluto_destino.is_absolute():
+                clienteDest = (diretorio_atual / caminho_absoluto_destino).resolve()
+            else:
+                clienteDest = caminho_absoluto_destino
 
             # Arquivos a serem movidos
             arquivos = {

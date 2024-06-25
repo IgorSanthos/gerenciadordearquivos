@@ -17,16 +17,15 @@ nav {
     height: 5rem;
     padding: 2rem;
 }
-nav a {
+nav ul li a {
 
     text-decoration: none;
     text-align: center;
     align-items: center;
     padding: 1rem;
-    margin-left: 2rem;
+    margin: 0 1rem;
     font-size: 1.8rem;
     color: #EE3D25;
-    
     font-weight: 500;
 }
 
@@ -39,7 +38,10 @@ nav a:hover{
     display: inline;
     font-size: 1.6rem;
 }
-
+nav ul li {
+    margin: 0 1rem;
+    
+}
 
 /* corpo fora o menu */
 .content {
@@ -50,12 +52,14 @@ nav a:hover{
         ". hero . form ."
         ". . . tab .";
         gap: 4rem;
+        padding: 4rem;
 }
 
 /* Lado Esquerdo */
 aside {
-    width: 80rem;
-    height: 56rem;
+    width: 100%;
+    max-width: 80rem;
+    height: auto;
     margin: 0;
     grid-area: hero;
     background-color:#6CBE45;
@@ -81,6 +85,8 @@ main {
     justify-content: center;
     align-items: center;
     width: 60rem;
+    max-width: 60rem;
+    margin: 0 auto;
 
 }
 main div{
@@ -133,18 +139,73 @@ main div select:hover{
 }
 
 table {
-    width: 60rem;
+    width: 100%;
+    max-width: 60rem;
     grid-area: tab;
     font-size: 1.2rem;
-    background-color: #ECA521;
-
-
+    background-color: #3B9EFC;
+    border-collapse: collapse;
+    margin: 2rem 0;
 }
-tr{
-    background-color: #6CBE45;
+
+table caption {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
-td {
+
+table th, table td {
+    padding: 1rem;
+    text-align: left;
+    border: 1.4px solid #000000;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .content {
+        grid-template-areas:
+            "hero"
+            "form"
+            "tab";
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+    }
+
+    main {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    main div .movebtt, 
+    main div select {
+        width: 100%;
+    }
 }

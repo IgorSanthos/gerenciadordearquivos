@@ -18,24 +18,25 @@ def move_files(df_filtrado):
     # dtCliente = f"{mes_anterior}_{ano_atual}"
     # # Verificar se o DataFrame filtrado está vazio
     #dtCliente = '/04_2024'
-
     if df_filtrado.empty:
         print("O DataFrame filtrado está vazio. Nenhuma ação a ser realizada.")
         return
     
     try:
-        for index,row in df_filtrado.iterrows():
-            #clienteJettax = Path(row['Origem'])
-            diretorio_atual = os.path.abspath(os.path.dirname(__file__))
+        for index, row in df_filtrado.iterrows():
+            # Obtendo o diretório atual
+            diretorio_atual = Path(__file__).parent.resolve()
+
+            # Caminho de origem e destino usando pathlib
             caminho_absoluto_origem = Path(row['Origem'])
-            caminho_relativo_origem = os.path.relpath(caminho_absoluto_origem, diretorio_atual)  # Transformando o caminho absoluto em um caminho relativo
-            clienteJettax = Path(caminho_relativo_origem)  # Usando o caminho relativo
+            caminho_relativo_origem = caminho_absoluto_origem.relative_to(diretorio_atual)
+            clienteJettax = caminho_relativo_origem
 
+            caminho_absoluto_destino = Path(row['Destino'])
+            caminho_relativo_destino = caminho_absoluto_destino.relative_to(diretorio_atual)
+            clienteDest = caminho_relativo_destino
 
-            caminho_absoluto = Path(row['Destino'])
-            caminho_relativo = os.path.relpath(caminho_absoluto, diretorio_atual)# Transformando o caminho absoluto em um caminho relativo
-            clienteDest = Path(caminho_relativo) # Usando o caminho relativo
-
+            # Arquivos a serem movidos
             arquivos = {
                 'enviada': list(clienteJettax.glob('enviada*')),
                 'recebida': list(clienteJettax.glob('recebido*')),
@@ -43,11 +44,13 @@ def move_files(df_filtrado):
                 'guia': list((clienteJettax / 'guia').glob('guia*'))
             }
 
+            # Destinos para os arquivos
             destinos = {
                 'nfs': [clienteDest / 'Arquivos XML/Serviços Prestados', clienteDest / 'Arquivos XML/Serviços Tomados'],
                 'iss': clienteDest / 'Tributos'
             }
 
+            # Copiando os arquivos para os destinos
             for arquivo in arquivos['enviada']:
                 shutil.copy(arquivo, destinos['nfs'][0])
 
@@ -60,7 +63,7 @@ def move_files(df_filtrado):
             for arquivo in arquivos['nfts']:
                 shutil.copy(arquivo, destinos['nfs'][1])
 
-        print(f"Arquivos movidos com sucesso.{clienteDest} ==== {clienteJettax}" )
+        print(f"Arquivos movidos com sucesso. {destinos}")
 
     except FileNotFoundError as e:
         print(f"Erro: Arquivo não encontrado - {e}")

@@ -29,6 +29,12 @@ nav a {
     
     font-weight: 500;
 }
+
+nav a:hover{
+    color: #6CBE45;
+    transition: color 0.5s ease;
+}
+
 .menu, li{
     display: inline;
     font-size: 1.6rem;
@@ -55,6 +61,10 @@ aside {
     background-color:#6CBE45;
     text-align: center;
 }
+aside.pg2{
+    background-color: white;
+}
+
 img {
     width: 70rem;
     height: auto;
@@ -86,12 +96,13 @@ main div h2{
 
 }
 main div h3 {
-
     padding-bottom: 4rem;
     font-weight: 200;
     font-size: 1.6rem;
 }
 main div .movebtt{
+    cursor: pointer;
+    transition: background-color 0.5s ease;
     font-size: 2.5rem;
     padding: 1rem;
     border-radius: 1rem;
@@ -99,13 +110,24 @@ main div .movebtt{
     background-color: #ECA521;
     margin-bottom: 2rem;
     color: #F2E8DE;
+    
 }
+main div .movebtt:hover {
+    background-color:#EE3D25;
+}
+
 main div select{
     font-size: 1.68rem;
     text-align: justify;
     width:40rem;
     background-color: #F2E8DE;
+    cursor: pointer;
 }
+main div select:hover{
+    background-color: #dc80247b;
+    transition: background-color 0.5s ease;
+}
+
 .tabelas-hidden {/* tabela  */
     display: none;
 }

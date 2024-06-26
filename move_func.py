@@ -60,7 +60,7 @@ def move_files(df_filtrado):
             for arquivo in arquivos['nfts']:
                 shutil.copy(arquivo, destinos['nfs'][1])
 
-        print(destinos)#f"Arquivos movidos com sucesso.{clienteDest} ==== {clienteJettax}" )
+        print(f"Arquivos movidos com sucesso." )
 
     except FileNotFoundError as e:
         print(f"Erro: Arquivo não encontrado - {e}")

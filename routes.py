@@ -12,6 +12,7 @@ app.secret_key = os.urandom(24)
 
 # PAGINA 1 HOME
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Diretório do arquivo atual
+
 @app.route('/')
 def index():
     if 'message' in request.args:
@@ -24,6 +25,7 @@ def index():
 @app.route('/move', methods=['POST'])
 def move():
     try:
+
         index_path = os.path.join(BASE_DIR, 'templates', 'index.html')  # Criação de caminho relativo
         
         with open(index_path, 'r', encoding='utf-8') as file:   # Lê o conteúdo do arquivo index.html
@@ -47,9 +49,7 @@ def move():
         # Cria o DataFrame com a origem e destino selecionados
         df_filtrado = pd.DataFrame(data, columns=['DataCluster', 'Nome', 'Origem', 'Destino'])
 
-        
         # Chamando a funcao Move
-        move_files(df_filtrado)
         messages_list = move_files(df_filtrado)
 
         if not messages_list:
@@ -57,10 +57,12 @@ def move():
         else:
             save_messages_list_to_desktop(messages_list)
             flash("Lista de erros salvos", "success")
-            return redirect(url_for('index', message="Lista de erros salvos no desktop !", message_type="success"))
+        
+        return redirect(url_for('index', message="Lista de erros salvos no desktop !", message_type="success"))
         
     except Exception as e:
-        return f"Erro ao mover arquivos: {e}", 500
+        flash(f"Erro ao mover arquivos: {str(e)}", "danger")
+        return redirect(url_for('index', message=f"Erro ao mover arquivos: {str(e)}", message_type="danger"))
 
 
 # PAGINA 2 - SELEÇÃO DE CLIENTES

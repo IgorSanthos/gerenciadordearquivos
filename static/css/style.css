@@ -134,6 +134,12 @@ main div select:hover{
     transition: background-color 0.5s ease;
 }
 
+.mensagemErro {
+    font-size: 3rem;
+    font-weight: 500;
+    color: red;
+}
+
 .tabelas-hidden {/* tabela  */
     display: none;
 }

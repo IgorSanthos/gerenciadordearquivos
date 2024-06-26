@@ -15,7 +15,7 @@
                 <li><a href="/">Home</a></li>
                 <li><a href="/selecionar-cliente">Lista de Clientes</a></li>
                 <li><a href="">Adicionar Clientes</a></li>
-                <li><a href="">Deletar Clientes</a></li>
+                <li><a href="/excluir">Deletar Clientes</a></li>
             </ul>
         </nav>
     </header>
@@ -45,6 +45,17 @@
                         <option value="dia11">Cluster Prefeitura Geral | Agendado para o dia 11</option>
 
                     </select>
+                </div>
+                <div>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            <ul class="flash-messages">
+                                {% for message in messages %}
+                                    <h3 class="mensagemErro">{{ message }}</h3>
+                                {% endfor %}
+                            </ul>
+                        {% endif %}
+                    {% endwith %}
                 </div>
                 <!-- dia de cluster 1 -->
                 <section class="tabelas-hidden"> 

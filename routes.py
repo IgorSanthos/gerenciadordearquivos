@@ -1,19 +1,23 @@
 
 import os
-from flask  import Flask, render_template, redirect, url_for, request
-from move_func import move_files
+from flask  import Flask, render_template, redirect, url_for, flash, request
 import pandas as pd
 from bs4 import BeautifulSoup
-
-# INICIO
-app = Flask(__name__)
+from move_func import move_files, save_messages_list_to_desktop
 
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Diretório do arquivo atual
+app = Flask(__name__)               # INICIO
+
+app.secret_key = os.urandom(24)
+
 # PAGINA 1 HOME
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))  # Diretório do arquivo atual
 @app.route('/')
-def index():        
+def index():
+    if 'message' in request.args:
+        flash(request.args['message'], request.args['message_type'])        
     return render_template('index.html')
+
 
 
 # FUNCAO MOVE
@@ -33,38 +37,36 @@ def move():
 
         for row in rows:
             cols = row.find_all('td')
-            if len(cols) >= 4:                      # Verifica se há pelo menos duas colunas
+            if len(cols) >= 4:                          # Verifica se há pelo menos duas colunas
                 datacluster = cols[0].text.strip()
                 nome = cols[1].text.strip()
-                origem = cols[2].text.strip()       # Origem vinda do HTML
-                destino = cols[3].text.strip()      # Destino vindo do HTML
+                origem = cols[2].text.strip()           # Origem vinda do HTML
+                destino = cols[3].text.strip()          # Destino vindo do HTML
                 data.append([datacluster, nome, origem, destino])
-
+                
         # Cria o DataFrame com a origem e destino selecionados
         df_filtrado = pd.DataFrame(data, columns=['DataCluster', 'Nome', 'Origem', 'Destino'])
+
+        
         # Chamando a funcao Move
         move_files(df_filtrado)
+        messages_list = move_files(df_filtrado)
+
+        if not messages_list:
+            flash("A lista de mensagens está vazia.", "error")
+        else:
+            save_messages_list_to_desktop(messages_list)
+            flash("Lista de erros salvos", "success")
+            return redirect(url_for('index', message="Lista de erros salvos no desktop !", message_type="success"))
         
-        return redirect(url_for('index'))
     except Exception as e:
         return f"Erro ao mover arquivos: {e}", 500
+
 
 # PAGINA 2 - SELEÇÃO DE CLIENTES
 @app.route('/selecionar-cliente')
 def clienteGeral():
     return render_template("pagina_2.html")
-
-
-# PAGINA 3 - ADICIONAR NOVO  
-@app.route('/adicionar-cliente')
-def adicionar():
-    return render_template("pagina_3.html")
-
-
-# DELETE PAGINA 4
-@app.route('/excluir')
-def selectDelete():
-    return render_template("pagina_4.html")
 
 
 # FINAL 
